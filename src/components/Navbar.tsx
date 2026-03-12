@@ -1,69 +1,86 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [
+const leftLinks = [
   { label: "Services", href: "#services" },
-  { label: "What We Source", href: "#categories" },
-  { label: "Who We Serve", href: "#clients" },
-  { label: "Our Process", href: "#process" },
+  { label: "Collections", href: "#categories" },
+];
+
+const rightLinks = [
+  { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#" className="font-display text-2xl font-bold tracking-wider text-warm-cream">
-          TANDEE
-        </a>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
+      <div className="container mx-auto px-6">
+        {/* Desktop: centered logo layout */}
+        <div className="hidden lg:grid grid-cols-3 items-center py-6">
+          <div className="flex items-center gap-10">
+            {leftLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
 
-        {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="font-body text-sm tracking-wide text-warm-cream-muted hover:text-gold transition-colors"
-            >
-              {link.label}
+          <div className="text-center">
+            <a href="#" className="font-display text-3xl font-light tracking-[0.15em] text-charcoal">
+              TANDEE
             </a>
-          ))}
-          <a
-            href="#contact"
-            className="ml-4 px-6 py-2.5 border border-gold text-gold text-sm font-medium tracking-wide hover:bg-gold hover:text-background transition-all"
-          >
-            Begin Your Journey
-          </a>
+            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-taupe mt-0.5">
+              Luxury Furniture Curator
+            </p>
+          </div>
+
+          <div className="flex items-center justify-end gap-10">
+            {rightLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
 
-        {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="lg:hidden text-warm-cream">
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile */}
+        <div className="lg:hidden flex items-center justify-between py-5">
+          <a href="#" className="font-display text-2xl font-light tracking-[0.15em] text-charcoal">
+            TANDEE
+          </a>
+          <button onClick={() => setOpen(!open)} className="text-charcoal">
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
+
+      {/* Subtle bottom line */}
+      <div className="h-px bg-divider" />
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-background border-t border-border px-6 pb-6 space-y-4">
-          {navLinks.map((link) => (
+        <div className="lg:hidden bg-background border-b border-divider px-6 py-8 space-y-5">
+          {[...leftLinks, ...rightLinks].map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block font-body text-sm text-warm-cream-muted hover:text-gold transition-colors py-2"
+              className="block font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            onClick={() => setOpen(false)}
-            className="inline-block px-6 py-2.5 border border-gold text-gold text-sm font-medium tracking-wide hover:bg-gold hover:text-background transition-all"
-          >
-            Begin Your Journey
-          </a>
         </div>
       )}
     </nav>

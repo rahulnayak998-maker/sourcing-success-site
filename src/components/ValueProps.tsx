@@ -1,63 +1,45 @@
-import { Shield, Ruler, BadgeDollarSign, Eye, Handshake, Gem } from "lucide-react";
-
 const props = [
   {
-    icon: Shield,
     title: "The Right Manufacturers",
     desc: "Our manufacturer relationships are built over years, evaluated in person, and held to a standard most buyers never get close enough to verify.",
   },
   {
-    icon: Ruler,
     title: "Made for Your Space",
     desc: "Every piece can be dimensioned, finished, and configured to your exact specification. The room drives the furniture, not the other way around.",
   },
   {
-    icon: BadgeDollarSign,
     title: "What It Should Cost",
-    desc: "When you go to the source, the price reflects the craft, not the chain of hands it passed through. Tandee's clients pay for quality. Not for intermediaries.",
+    desc: "When you go to the source, the price reflects the craft, not the chain of hands it passed through.",
   },
   {
-    icon: Eye,
     title: "Eyes on Every Detail",
-    desc: "We inspect every order at the factory before it moves. What is agreed is what arrives. No surprises at delivery. No compromises along the way.",
-  },
-  {
-    icon: Handshake,
-    title: "One Conversation. Everything Handled.",
-    desc: "From the first brief to the last delivery — sourcing, customisation, production, logistics. You stay focused on your project. We carry the rest.",
-  },
-  {
-    icon: Gem,
-    title: "Furniture That Exists Nowhere Else",
-    desc: "For clients who want something truly singular — one piece, one space, made for no one else. We engage the specialist manufacturers who make that possible.",
+    desc: "We inspect every order at the factory before it moves. What is agreed is what arrives. No surprises at delivery.",
   },
 ];
 
 const ValueProps = () => {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-28 md:py-36 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-display text-3xl md:text-5xl font-medium text-warm-cream mb-6">
-            Not what the market offers.{" "}
-            <span className="text-gold italic">What you actually want.</span>
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-taupe mb-6">Why Tandee</p>
+          <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
+            Not what the market offers.
+            <br />
+            <em>What you actually want.</em>
           </h2>
-          <p className="font-body text-warm-cream-muted text-lg">
-            There is a difference between furniture that fills a room and furniture that defines one. Tandee exists for clients who know the difference and refuse to settle.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {props.map((item) => (
-            <div
-              key={item.title}
-              className="bg-surface-elevated border border-border p-8 hover:border-gold/30 transition-colors group"
-            >
-              <item.icon className="w-8 h-8 text-gold mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="font-display text-xl font-medium text-warm-cream mb-3">
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-16 max-w-4xl mx-auto">
+          {props.map((item, i) => (
+            <div key={item.title} className="text-center">
+              <span className="font-display text-5xl font-light text-cream-dark">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-display text-xl md:text-2xl font-normal text-charcoal mt-4 mb-4">
                 {item.title}
               </h3>
-              <p className="font-body text-sm leading-relaxed text-warm-cream-muted">
+              <p className="font-body text-sm text-taupe leading-relaxed font-light">
                 {item.desc}
               </p>
             </div>

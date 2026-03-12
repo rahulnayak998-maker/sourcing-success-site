@@ -1,61 +1,55 @@
-import { Search, Handshake, Plane, ClipboardCheck, Eye, Truck } from "lucide-react";
-
 const services = [
   {
-    icon: Search,
     title: "Finding the Right Curator",
-    desc: "We know who makes the best and we know how to get you in front of them. Every manufacturer recommendation is based on years of relationship and in-person evaluation.",
+    desc: "Every manufacturer recommendation is based on years of relationship, in-person evaluation, and an understanding of what exceptional actually looks like.",
   },
   {
-    icon: Handshake,
     title: "Negotiation & Terms",
     desc: "Pricing, lead times, production terms — negotiated on your behalf by people who understand both the market and the manufacturer.",
   },
   {
-    icon: Plane,
     title: "The China Visit",
-    desc: "For clients who want to see the world Tandee works in. Foshan, Guangzhou, Shanghai. The showrooms, the factories, the materials. Fully accompanied.",
+    desc: "Foshan, Guangzhou, Shanghai. The showrooms, the factories, the materials. Fully accompanied, fully considered.",
   },
   {
-    icon: Eye,
     title: "Quality, Verified",
-    desc: "Every order is inspected in-factory before it leaves. Against your specification. Against your standard. Nothing ships without your sign-off.",
+    desc: "Every order is inspected in-factory before it leaves. Against your specification. Nothing ships without your sign-off.",
   },
   {
-    icon: Truck,
     title: "From Factory to Your Door",
-    desc: "Shipping, customs, freight coordination, last-mile delivery — managed entirely by Tandee. Your furniture arrives where and when it should.",
+    desc: "Shipping, customs, freight coordination, last-mile delivery — managed entirely by Tandee.",
   },
   {
-    icon: ClipboardCheck,
     title: "Full Project Management",
-    desc: "For large-scale projects, Tandee functions as your dedicated procurement team — coordinating categories, suppliers, timelines, and delivery milestones.",
+    desc: "Coordinating categories, suppliers, timelines, and delivery milestones so your project moves forward without friction.",
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 md:py-32 bg-background">
+    <section id="services" className="py-28 md:py-36 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4">Our Services</p>
-          <h2 className="font-display text-3xl md:text-5xl font-medium text-warm-cream mb-6">
-            We carry the complexity.
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-taupe mb-6">Our Services</p>
+          <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
+            We carry
+            <em> the complexity.</em>
           </h2>
-          <p className="font-body text-warm-cream-muted text-lg">
-            You bring the vision. Tandee handles everything from the moment that vision meets the manufacturing world.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((item) => (
-            <div key={item.title} className="flex gap-5">
-              <div className="flex-shrink-0 w-12 h-12 border border-gold/30 flex items-center justify-center">
-                <item.icon className="w-5 h-5 text-gold" />
-              </div>
+        <div className="max-w-3xl mx-auto divide-y divide-divider">
+          {services.map((item, i) => (
+            <div key={item.title} className="py-8 md:py-10 flex gap-6 md:gap-10 items-start">
+              <span className="font-display text-2xl font-light text-cream-dark flex-shrink-0 w-10">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <div>
-                <h3 className="font-display text-lg font-medium text-warm-cream mb-2">{item.title}</h3>
-                <p className="font-body text-sm text-warm-cream-muted leading-relaxed">{item.desc}</p>
+                <h3 className="font-display text-xl md:text-2xl font-normal text-charcoal mb-2">
+                  {item.title}
+                </h3>
+                <p className="font-body text-sm text-taupe leading-relaxed font-light">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
