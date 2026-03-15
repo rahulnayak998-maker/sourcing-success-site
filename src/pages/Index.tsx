@@ -5,6 +5,7 @@ import Categories from "@/components/Categories";
 import ProjectTypes from "@/components/ProjectTypes";
 import CTASection from "@/components/CTASection";
 import Customization from "@/components/Customization";
+import CTASectionTwo from "@/components/CTASectionTwo";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
 import About from "@/components/About";
@@ -21,6 +22,7 @@ const Index = () => {
       <ProjectTypes />
       <CTASection />
       <Customization />
+      <CTASectionTwo />
       <Services />
       <Process />
       <About />

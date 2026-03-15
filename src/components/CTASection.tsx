@@ -1,6 +1,20 @@
+import type { MouseEvent } from "react";
 import ctaBg from "@/assets/cta-bg.jpg";
 
 const CTASection = () => {
+  const scrollToContact = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const section = document.getElementById("contact");
+    const nav = document.querySelector("nav");
+    const navHeight = nav instanceof HTMLElement ? nav.offsetHeight : 0;
+
+    if (section) {
+      const top = section.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative py-36 md:py-44 overflow-hidden">
       <div
@@ -21,6 +35,7 @@ const CTASection = () => {
         </p>
         <a
           href="#contact"
+          onClick={scrollToContact}
           className="inline-block font-body text-xs tracking-[0.25em] uppercase text-cream border-b border-cream/50 pb-1 hover:border-cream transition-colors"
         >
           Start Your Project

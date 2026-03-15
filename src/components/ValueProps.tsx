@@ -8,13 +8,21 @@ const props = [
     desc: "Every piece can be dimensioned, finished, and configured to your exact specification. The room drives the furniture, not the other way around.",
   },
   {
-    title: "What It Should Cost",
-    desc: "When you go to the source, the price reflects the craft, not the chain of hands it passed through.",
+    title: "40+ Verified Factories",
+    desc: "Access to over 40 carefully vetted factories across China's premier manufacturing regions. More options. Better matches. Every time.",
   },
   {
-    title: "Eyes on Every Detail",
-    desc: "We inspect every order at the factory before it moves. What is agreed is what arrives. No surprises at delivery.",
+    title: "Better Pricing. Direct from the Source",
+    desc: "When furniture travels from factory to your space without unnecessary stops along the way, the price reflects the craft, not the journey. Tandee clients consistently get significantly better value than traditional retail and import channels offer.",
   },
+  {
+    title: "Source with Complete Confidence",
+    desc: "The global furniture sourcing market has its risks - misrepresented quality, unreliable suppliers, orders that never arrive as promised. Tandee's verified network and on-ground presence means every supplier is known, every order is tracked, and your investment is protected."
+  },
+  {
+    title: "One Conversation. Everything Handled",
+    desc: "From the first brief to the last delivery - sourcing, customisation, production, logistics. You stay focused on your project. We carry the rest."
+  }
 ];
 
 const ValueProps = () => {
@@ -30,16 +38,19 @@ const ValueProps = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-16 max-w-4xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {props.map((item, i) => (
-            <div key={item.title} className="text-center">
-              <span className="font-display text-5xl font-light text-cream-dark">
+            <div
+              key={item.title}
+              className="flex h-full flex-col rounded-sm border border-divider bg-cream-dark/35 px-8 py-9 text-center"
+            >
+              <span className="font-display text-5xl font-light text-bronze">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display text-xl md:text-2xl font-normal text-charcoal mt-4 mb-4">
                 {item.title}
               </h3>
-              <p className="font-body text-sm text-taupe leading-relaxed font-light">
+              <p className="font-body text-sm text-taupe leading-relaxed font-bold">
                 {item.desc}
               </p>
             </div>

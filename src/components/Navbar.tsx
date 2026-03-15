@@ -1,3 +1,4 @@
+import type { MouseEvent } from "react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -15,6 +16,28 @@ const rightLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  const scrollToSection = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const id = href.replace("#", "");
+    const section = document.getElementById(id);
+    const nav = document.querySelector("nav");
+    const navHeight = nav instanceof HTMLElement ? nav.offsetHeight : 0;
+
+    if (section) {
+      const top = section.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+
+    setOpen(false);
+  };
+
+  const scrollToTop = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
       <div className="container mx-auto px-6">
@@ -25,6 +48,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={scrollToSection(link.href)}
                 className="font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
               >
                 {link.label}
@@ -33,7 +57,7 @@ const Navbar = () => {
           </div>
 
           <div className="text-center">
-            <a href="#" className="font-display text-3xl font-light tracking-[0.15em] text-charcoal">
+            <a href="#" onClick={scrollToTop} className="font-display text-3xl font-light tracking-[0.15em] text-charcoal">
               TANDEE
             </a>
             <p className="font-body text-[10px] tracking-[0.35em] uppercase text-taupe mt-0.5">
@@ -46,6 +70,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={scrollToSection(link.href)}
                 className="font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
               >
                 {link.label}
@@ -56,7 +81,7 @@ const Navbar = () => {
 
         {/* Mobile */}
         <div className="lg:hidden flex items-center justify-between py-5">
-          <a href="#" className="font-display text-2xl font-light tracking-[0.15em] text-charcoal">
+          <a href="#" onClick={scrollToTop} className="font-display text-2xl font-light tracking-[0.15em] text-charcoal">
             TANDEE
           </a>
           <button onClick={() => setOpen(!open)} className="text-charcoal">
@@ -75,7 +100,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              onClick={() => setOpen(false)}
+              onClick={scrollToSection(link.href)}
               className="block font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
             >
               {link.label}

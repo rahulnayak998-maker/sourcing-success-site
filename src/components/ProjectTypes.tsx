@@ -38,12 +38,15 @@ const ProjectTypes = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14 max-w-5xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {types.map((item) => (
-            <div key={item.title} className="text-center">
+            <div
+              key={item.title}
+              className="flex h-full flex-col rounded-sm border border-divider bg-cream-dark/35 px-8 py-9 text-center"
+            >
               <div className="w-12 h-px bg-divider mx-auto mb-6" />
               <h3 className="font-display text-xl font-normal text-charcoal mb-3">{item.title}</h3>
-              <p className="font-body text-sm text-taupe leading-relaxed font-light">{item.desc}</p>
+              <p className="font-body text-sm text-taupe leading-relaxed font-bold">{item.desc}</p>
             </div>
           ))}
         </div>

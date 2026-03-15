@@ -19,14 +19,21 @@ const Process = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-16 max-w-5xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
           {steps.map((step, i) => (
-            <div key={step.title} className="relative">
-              <span className="font-display text-6xl font-light text-cream-dark leading-none">
+            <div
+              key={step.title}
+              className="flex h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
+            >
+              <span className="font-display text-6xl font-light text-bronze leading-none">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display text-xl font-normal text-charcoal mt-3 mb-3">{step.title}</h3>
-              <p className="font-body text-sm text-taupe leading-relaxed font-light">{step.desc}</p>
+              <h3 className="font-display text-xl font-normal text-charcoal mt-5 mb-3">
+                {step.title}
+              </h3>
+              <p className="font-body text-sm text-taupe leading-relaxed font-bold">
+                {step.desc}
+              </p>
             </div>
           ))}
         </div>

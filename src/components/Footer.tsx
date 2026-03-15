@@ -1,3 +1,5 @@
+import {Facebook, Instagram, Youtube} from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="py-16 bg-charcoal">
@@ -27,6 +29,11 @@ const Footer = () => {
           <p className="font-body text-xs text-cream/40">hello@tandee.in</p>
           <p className="font-body text-xs text-cream/40">+91 98765 43210</p>
           <p className="font-body text-xs text-cream/40">India · China</p>
+          <div className="flex items-center justify-center gap-4 text-cream/40">
+            <a href="https://youtube.com" className="hover:text-cream transition-colors"><Youtube size={25} className="text-inherit" /></a>
+            <a href="https://facebook.com" className="hover:text-cream transition-colors"><Facebook size={20} className="text-inherit" /></a>
+            <a href="https://instagram.com" className="hover:text-cream transition-colors"><Instagram size={20} className="text-inherit" /></a>
+          </div>
         </div>
 
         <div className="border-t border-cream/10 pt-8 text-center">

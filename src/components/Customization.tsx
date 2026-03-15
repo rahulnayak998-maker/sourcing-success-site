@@ -44,16 +44,19 @@ const Customization = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14 max-w-5xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {options.map((item) => (
-            <div key={item.title}>
+            <div
+              key={item.title}
+              className="flex h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
+            >
               <h3 className="font-display text-xl font-normal text-charcoal mb-3">{item.title}</h3>
-              <p className="font-body text-sm text-taupe leading-relaxed font-light mb-4">{item.desc}</p>
+              <p className="font-body text-sm text-taupe leading-relaxed font-bold mb-4">{item.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="font-body text-[11px] tracking-wide px-3 py-1.5 border border-divider text-taupe"
+                    className="font-body text-[11px] tracking-wide px-3 py-1.5 border border-divider text-taupe font-bold"
                   >
                     {tag}
                   </span>

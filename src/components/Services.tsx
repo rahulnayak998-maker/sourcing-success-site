@@ -40,14 +40,14 @@ const Services = () => {
         <div className="max-w-3xl mx-auto divide-y divide-divider">
           {services.map((item, i) => (
             <div key={item.title} className="py-8 md:py-10 flex gap-6 md:gap-10 items-start">
-              <span className="font-display text-2xl font-light text-cream-dark flex-shrink-0 w-10">
+              <span className="font-display text-2xl font-light text-bronze flex-shrink-0 w-10">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>
                 <h3 className="font-display text-xl md:text-2xl font-normal text-charcoal mb-2">
                   {item.title}
                 </h3>
-                <p className="font-body text-sm text-taupe leading-relaxed font-light">
+                <p className="font-body text-sm text-taupe leading-relaxed font-bold">
                   {item.desc}
                 </p>
               </div>
