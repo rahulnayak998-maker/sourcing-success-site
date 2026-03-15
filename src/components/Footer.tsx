@@ -1,6 +1,29 @@
-import {Facebook, Instagram, Youtube} from "lucide-react";
+import type { MouseEvent } from "react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
+
+const links = [
+  { label: "Services", href: "#services" },
+  { label: "Collections", href: "#categories" },
+  { label: "Process", href: "#process" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Footer = () => {
+  const scrollToSection = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const id = href.replace("#", "");
+    const section = document.getElementById(id);
+    const nav = document.querySelector("nav");
+    const navHeight = nav instanceof HTMLElement ? nav.offsetHeight : 0;
+
+    if (section) {
+      const top = section.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="py-16 bg-charcoal">
       <div className="container mx-auto px-6">
@@ -14,13 +37,14 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-8 mb-12">
-          {["Services", "Collections", "Process", "About", "Contact"].map((label) => (
+          {links.map((link) => (
             <a
-              key={label}
-              href={`#${label.toLowerCase()}`}
+              key={link.label}
+              href={link.href}
+              onClick={scrollToSection(link.href)}
               className="font-body text-xs tracking-[0.15em] uppercase text-cream/50 hover:text-cream transition-colors"
             >
-              {label}
+              {link.label}
             </a>
           ))}
         </div>
