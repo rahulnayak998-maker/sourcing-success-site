@@ -2,12 +2,9 @@ import type { MouseEvent } from "react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const leftLinks = [
-  { label: "Services", href: "#services" },
+const links = [
   { label: "Collections", href: "#categories" },
-];
-
-const rightLinks = [
+  { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -42,21 +39,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         {/* Desktop: centered logo layout */}
-        <div className="hidden lg:grid grid-cols-3 items-center py-6">
-          <div className="flex items-center gap-10">
-            {leftLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={scrollToSection(link.href)}
-                className="font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+        <div className="hidden lg:grid grid-cols-2 items-center py-6">
 
-          <div className="text-center">
+          <div className="text-left">
             <a href="#" onClick={scrollToTop} className="font-display text-3xl font-light tracking-[0.15em] text-charcoal">
               TANDEE
             </a>
@@ -65,13 +50,13 @@ const Navbar = () => {
             </p>
           </div>
 
-          <div className="flex items-center justify-end gap-10">
-            {rightLinks.map((link) => (
+          <div className="flex items-right gap-10">
+            {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={scrollToSection(link.href)}
-                className="font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
+                className="font-body text-sm tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
               >
                 {link.label}
               </a>

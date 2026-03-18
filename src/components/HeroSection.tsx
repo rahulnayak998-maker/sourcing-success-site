@@ -23,17 +23,11 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-cream/10" />
 
-      <div className="relative z-10 text-center max-w-3xl mx-auto px-6 pt-24">
+      <div className="relative z-10 text-center mx-auto px-6 pt-24">
         <div className="-translate-y-16">
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.1] mb-8">
-            Some rooms are
-            <br />
-            <em className="font-light">never forgotten.</em>
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.1] mb-8">
+            <em>Some rooms are never forgotten.</em>
           </h1>
-          <div className="w-16 h-px bg-white mx-auto mb-8" />
-          <p className="font-body text-sm md:text-base leading-relaxed text-white max-w-xl mx-auto mb-12 font-light">
-              Tandee is a luxury procurement specialist connecting India to China's finest furniture manufacturers, end to end.
-          </p>
         </div>
         <a
           href="#contact"

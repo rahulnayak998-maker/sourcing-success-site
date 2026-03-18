@@ -35,12 +35,10 @@ const Customization = () => {
   return (
     <section className="py-28 md:py-36 bg-cream-dark">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-taupe mb-6">Customisation</p>
+        <div className="text-center mx-auto mb-20">
+          <p className="font-body text-xl tracking-[0.3em] uppercase text-taupe mb-6">Customisation</p>
           <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
-            Everything is curated
-            <br />
-            <em>per your vision.</em>
+            <em>Everything is curated per your vision.</em>
           </h2>
         </div>
 
@@ -50,13 +48,13 @@ const Customization = () => {
               key={item.title}
               className="flex h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
             >
-              <h3 className="font-display text-xl font-normal text-charcoal mb-3">{item.title}</h3>
-              <p className="font-body text-sm text-taupe leading-relaxed font-bold mb-4">{item.desc}</p>
+              <h3 className="font-display text-2xl font-normal text-charcoal mb-3">{item.title}</h3>
+              <p className="font-body text-taupe leading-relaxed mb-4">{item.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="font-body text-[11px] tracking-wide px-3 py-1.5 border border-divider text-taupe font-bold"
+                    className="font-body text-sm tracking-wide px-3 py-1.5 border border-divider text-taupe"
                   >
                     {tag}
                   </span>

@@ -29,12 +29,10 @@ const ValueProps = () => {
   return (
     <section className="py-28 md:py-36 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-taupe mb-6">Why Tandee</p>
+        <div className="text-center mx-auto mb-20">
+          <p className="font-body text-xl tracking-[0.3em] uppercase text-taupe mb-6">Why Tandee</p>
           <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
-            Not what the market offers.
-            <br />
-            <em>What you actually want.</em>
+            <em>Not what the market offers. What you actually want.</em>
           </h2>
         </div>
 
@@ -50,7 +48,7 @@ const ValueProps = () => {
               <h3 className="font-display text-xl md:text-2xl font-normal text-charcoal mt-4 mb-4">
                 {item.title}
               </h3>
-              <p className="font-body text-sm text-taupe leading-relaxed font-bold">
+              <p className="font-body text-taupe leading-relaxed">
                 {item.desc}
               </p>
             </div>

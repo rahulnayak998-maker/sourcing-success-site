@@ -11,15 +11,14 @@ const Process = () => {
   return (
     <section id="process" className="py-28 md:py-36 bg-cream-dark">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-taupe mb-6">Our Process</p>
+        <div className="text-center mx-auto mb-20">
+          <p className="font-body text-xl tracking-[0.3em] uppercase text-taupe mb-6">Our Process</p>
           <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
-            Six steps.
-            <em> No surprises.</em>
+            <em>Six steps. No surprises.</em>
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {steps.map((step, i) => (
             <div
               key={step.title}
@@ -28,10 +27,10 @@ const Process = () => {
               <span className="font-display text-6xl font-light text-bronze leading-none">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display text-xl font-normal text-charcoal mt-5 mb-3">
+              <h3 className="font-display text-2xl font-normal text-charcoal mt-5 mb-3">
                 {step.title}
               </h3>
-              <p className="font-body text-sm text-taupe leading-relaxed font-bold">
+              <p className="font-body text-taupe leading-relaxed">
                 {step.desc}
               </p>
             </div>
