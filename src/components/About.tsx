@@ -28,7 +28,7 @@ const About = () => {
             <img
               src={aboutBg}
               alt="Tandee curated showroom"
-              className="w-full aspect-[4/5] object-cover"
+              className="w-full card aspect-[4/5] object-cover"
               loading="lazy"
             />
           </div>

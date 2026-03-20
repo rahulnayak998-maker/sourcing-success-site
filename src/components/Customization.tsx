@@ -33,7 +33,7 @@ const options = [
 
 const Customization = () => {
   return (
-    <section className="py-28 md:py-36 bg-cream-dark">
+    <section id="customisation" className="py-28 md:py-36 bg-cream-dark">
       <div className="container mx-auto px-6">
         <div className="text-center mx-auto mb-20">
           <p className="font-body text-xl tracking-[0.3em] uppercase text-taupe mb-6">Customisation</p>
@@ -46,7 +46,7 @@ const Customization = () => {
           {options.map((item) => (
             <div
               key={item.title}
-              className="flex h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
+              className="flex card h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
             >
               <h3 className="font-display text-2xl font-normal text-charcoal mb-3">{item.title}</h3>
               <p className="font-body text-taupe leading-relaxed mb-4">{item.desc}</p>
@@ -54,7 +54,7 @@ const Customization = () => {
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="font-body text-sm tracking-wide px-3 py-1.5 border border-divider text-taupe"
+                    className="button font-body text-sm tracking-wide px-3 py-1.5 border border-divider text-taupe"
                   >
                     {tag}
                   </span>

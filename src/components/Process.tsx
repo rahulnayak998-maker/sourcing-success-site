@@ -22,7 +22,7 @@ const Process = () => {
           {steps.map((step, i) => (
             <div
               key={step.title}
-              className="flex h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
+              className="flex card h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
             >
               <span className="font-display text-6xl font-light text-bronze leading-none">
                 {String(i + 1).padStart(2, "0")}

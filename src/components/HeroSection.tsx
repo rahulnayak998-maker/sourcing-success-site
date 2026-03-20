@@ -1,5 +1,5 @@
 import type { MouseEvent } from "react";
-import heroBg from "@/assets/hero-bg2.jpeg";
+import heroBg from "@/assets/Hero_bg_vid.mp4";
 
 const HeroSection = () => {
   const scrollToContact = (event: MouseEvent<HTMLAnchorElement>) => {
@@ -17,11 +17,15 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})`}}
-      />
-      <div className="absolute inset-0 bg-cream/10" />
+      <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src={heroBg} type="video/mp4" />
+        </video>
 
       <div className="relative z-10 text-center mx-auto px-6 pt-24">
         <div className="-translate-y-16">

@@ -40,7 +40,7 @@ const ValueProps = () => {
           {props.map((item, i) => (
             <div
               key={item.title}
-              className="flex h-full flex-col rounded-sm border border-divider bg-cream-dark/35 px-8 py-9 text-center"
+              className="flex card h-full flex-col rounded-sm border border-divider bg-cream-dark/35 px-8 py-9 text-center"
             >
               <span className="font-display text-5xl font-light text-bronze">
                 {String(i + 1).padStart(2, "0")}

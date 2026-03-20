@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Collections", href: "#categories" },
+  { label: "Customisation", href: "#customisation" },
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
@@ -38,25 +39,24 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
       <div className="container mx-auto px-6">
-        {/* Desktop: centered logo layout */}
-        <div className="hidden lg:grid grid-cols-2 items-center py-6">
-
-          <div className="text-left">
+        {/* Desktop */}
+        <div className="hidden min-[980px]:flex items-center justify-between gap-5 py-6">
+          <div className="shrink-0 text-left">
             <a href="#" onClick={scrollToTop} className="font-display text-3xl font-light tracking-[0.15em] text-charcoal">
               TANDEE
             </a>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-taupe mt-0.5">
+            <p className="mt-0.5 font-body text-[10px] tracking-[0.35em] uppercase text-taupe">
               Luxury Furniture Curator
             </p>
           </div>
 
-          <div className="flex items-right gap-10">
+          <div className="flex min-w-0 flex-1 items-center justify-end gap-5">
             {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={scrollToSection(link.href)}
-                className="font-body text-sm tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
+                className="whitespace-nowrap font-body text-sm tracking-[0.2em] uppercase text-taupe transition-colors hover:text-charcoal"
               >
                 {link.label}
               </a>
@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile */}
-        <div className="lg:hidden flex items-center justify-between py-5">
+        <div className="flex items-center justify-between py-5 min-[980px]:hidden">
           <a href="#" onClick={scrollToTop} className="font-display text-2xl font-light tracking-[0.15em] text-charcoal">
             TANDEE
           </a>
@@ -80,8 +80,8 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-background border-b border-divider px-6 py-8 space-y-5">
-          {[...leftLinks, ...rightLinks].map((link) => (
+        <div className="bg-background border-b border-divider px-6 py-8 space-y-5 min-[980px]:hidden">
+          {links.map((link) => (
             <a
               key={link.label}
               href={link.href}

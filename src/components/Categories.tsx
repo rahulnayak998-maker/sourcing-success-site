@@ -28,7 +28,7 @@ const Categories = () => {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {categories.map((cat) => (
             <div key={cat.title} className="group cursor-pointer">
-              <div className="aspect-[3/4] overflow-hidden mb-4">
+              <div className="aspect-[3/4] card overflow-hidden mb-4">
                 <img
                   src={cat.img}
                   alt={cat.title}

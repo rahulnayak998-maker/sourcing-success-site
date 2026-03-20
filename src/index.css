@@ -77,6 +77,12 @@
 }
 
 @layer utilities {
+  .card{
+    border-radius: 1.5em;
+  }
+  .button{
+    border-radius: 2em;
+  }
   .text-charcoal {
     color: hsl(var(--charcoal));
   }

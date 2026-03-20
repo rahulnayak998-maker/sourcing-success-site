@@ -47,7 +47,7 @@ const Contact = () => {
             <div className="text-center pt-4">
               <button
                 type="submit"
-                className="inline-block font-body text-sm tracking-[0.25em] uppercase text-cream bg-charcoal px-12 py-4 hover:bg-bronze transition-colors"
+                className="button inline-block font-body text-sm tracking-[0.25em] uppercase text-cream bg-charcoal px-12 py-4 hover:bg-bronze transition-colors"
               >
                 Submit Your Brief
               </button>

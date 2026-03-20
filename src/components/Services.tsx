@@ -36,9 +36,9 @@ const Services = () => {
           </h2>
         </div>
 
-        <div className="max-w-6xl mx-auto divide-y divide-divider">
+        <div className="max-w-6xl mx-auto">
           {services.map((item, i) => (
-            <div key={item.title} className="py-8 md:py-10 flex gap-6 md:gap-10 items-start">
+            <div key={item.title} className="card border-t py-8 md:py-10 flex gap-6 md:gap-10 items-start">
               <span className="font-display text-4xl font-light text-bronze flex-shrink-0 w-10">
                 {String(i + 1).padStart(2, "0")}
               </span>
