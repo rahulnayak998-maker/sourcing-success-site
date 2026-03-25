@@ -11,12 +11,14 @@ import Process from "@/components/Process";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Info from "@/components/Info";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
+      <Info/>
       <ValueProps />
       <Categories />
       <ProjectTypes />

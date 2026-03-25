@@ -22,15 +22,15 @@ const Process = () => {
           {steps.map((step, i) => (
             <div
               key={step.title}
-              className="flex card h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
+              className="flex card h-full flex-col rounded-sm border bg-charcoal/95 px-8 py-9"
             >
-              <span className="font-display text-6xl font-light text-bronze leading-none">
+              <span className="font-display text-6xl font-light text-white leading-none">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display text-2xl font-normal text-charcoal mt-5 mb-3">
+              <h3 className="mt-5 mb-3 font-display text-2xl font-normal text-white">
                 {step.title}
               </h3>
-              <p className="font-body text-taupe leading-relaxed">
+              <p className="font-body leading-relaxed text-white">
                 {step.desc}
               </p>
             </div>

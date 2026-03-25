@@ -37,18 +37,28 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         {/* Desktop */}
-        <div className="hidden min-[980px]:flex items-center justify-between gap-5 py-6">
-          <div className="shrink-0 text-left">
-            <a href="#" onClick={scrollToTop} className="font-display text-3xl font-light tracking-[0.15em] text-charcoal">
-              TANDEE
-            </a>
-            <p className="mt-0.5 font-body text-[10px] tracking-[0.35em] uppercase text-taupe">
-              Luxury Furniture Curator
+        <div className="hidden min-[980px]:flex items-center justify-between gap-6 py-4">
+        <div className="shrink-0 text-left">
+          <a
+            href="#"
+            onClick={scrollToTop}
+            className="flex h-12 shrink-0 items-center overflow-hidden opacity-90"
+            aria-label="Tandee home"
+          >
+            <img
+              src="/Tandee_Logo_new.png"
+              alt="Tandee"
+              className="h-20 w-auto max-w-none object-cover object-center"
+            />
+          </a>
+
+            <p className="mt-0.5 font-body text-[10px] tracking-[0.15em] uppercase text-taupe">
+              CURATED FURNISHINGS FOR EXCEPTIONAL SPACES
             </p>
-          </div>
+            </div>
 
           <div className="flex min-w-0 flex-1 items-center justify-end gap-5">
             {links.map((link) => (
@@ -56,7 +66,7 @@ const Navbar = () => {
                 key={link.label}
                 href={link.href}
                 onClick={scrollToSection(link.href)}
-                className="whitespace-nowrap font-body text-sm tracking-[0.2em] uppercase text-taupe transition-colors hover:text-charcoal"
+                className="whitespace-nowrap font-body text-sm tracking-[0.2em] uppercase text-white transition-colors hover:text-taupe"
               >
                 {link.label}
               </a>
@@ -65,11 +75,20 @@ const Navbar = () => {
         </div>
 
         {/* Mobile */}
-        <div className="flex items-center justify-between py-5 min-[980px]:hidden">
-          <a href="#" onClick={scrollToTop} className="font-display text-2xl font-light tracking-[0.15em] text-charcoal">
-            TANDEE
+        <div className="flex items-center justify-between py-4 min-[980px]:hidden">
+          <a
+            href="#"
+            onClick={scrollToTop}
+            className="flex h-10 items-center overflow-hidden opacity-90"
+            aria-label="Tandee home"
+          >
+            <img
+              src="/Tandee_Logo_new.png"
+              alt="Tandee"
+              className="h-16 w-auto max-w-none object-cover object-center"
+            />
           </a>
-          <button onClick={() => setOpen(!open)} className="text-charcoal">
+          <button onClick={() => setOpen(!open)} className="text-warm-white">
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
@@ -80,13 +99,13 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="bg-background border-b border-divider px-6 py-8 space-y-5 min-[980px]:hidden">
+        <div className="bg-charcoal border-b border-divider px-6 py-8 space-y-5 min-[980px]:hidden">
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={scrollToSection(link.href)}
-              className="block font-body text-xs tracking-[0.2em] uppercase text-taupe hover:text-charcoal transition-colors"
+              className="block font-body text-xs tracking-[0.2em] uppercase text-taupe transition-colors hover:text-warm-white"
             >
               {link.label}
             </a>

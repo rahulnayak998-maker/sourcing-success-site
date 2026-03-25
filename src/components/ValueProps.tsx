@@ -1,34 +1,34 @@
 const props = [
   {
-    title: "The Right Manufacturers",
-    desc: "Our manufacturer relationships are built over years, evaluated in person, and held to a standard most buyers never get close enough to verify.",
+    title: "Private Residential Furniture",
+    desc: "Furniture that reflects the art of living. Curated pieces tailored to your lifestyle, scale, and sensibilities & crafted to elevate every corner of your home.",
   },
   {
-    title: "Made for Your Space",
-    desc: "Every piece can be dimensioned, finished, and configured to your exact specification. The room drives the furniture, not the other way around.",
+    title: "Corporate Office Furniture",
+    desc: "Where design meets distinction. Thoughtfully curated furniture that embodies your brand’s stature while enhancing functionality, flow, and productivity.",
   },
   {
-    title: "40+ Verified Factories",
-    desc: "Access to over 40 carefully vetted factories across China's premier manufacturing regions. More options. Better matches. Every time.",
+    title: "Educational Institution Furniture",
+    desc: "Built for learning. Designed for longevity. Purpose-driven furniture curated for schools and colleges. Balancing durability, comfort, and performance at scale.",
   },
   {
-    title: "Better Pricing. Direct from the Source",
-    desc: "When furniture travels from factory to your space without unnecessary stops along the way, the price reflects the craft, not the journey. Tandee clients consistently get significantly better value than traditional retail and import channels offer.",
+    title: "Hospitality Furniture",
+    desc: "Designed to leave a lasting impression. Furniture that seamlessly blends aesthetics, comfort, and resilience—crafted for spaces that welcome, inspire, and endure.",
   },
   {
-    title: "Source with Complete Confidence",
-    desc: "The global furniture sourcing market has its risks - misrepresented quality, unreliable suppliers, orders that never arrive as promised. Tandee's verified network and on-ground presence means every supplier is known, every order is tracked, and your investment is protected."
+    title: "Healthcare Furniture",
+    desc: "Precision in every detail. Care in every element. Meticulously curated furniture focused on hygiene, comfort, and efficiency—supporting critical environments with uncompromising standards."
   },
   {
-    title: "One Conversation. Everything Handled",
-    desc: "From the first brief to the last delivery - sourcing, customisation, production, logistics. You stay focused on your project. We carry the rest."
+    title: "Outdoor Furniture",
+    desc: "Beyond walls, without compromise. Weather-resistant, design- led furniture curated for open spaces-where durability meets refined outdoor living."
   }
 ];
 
 const ValueProps = () => {
   return (
     <section className="py-28 md:py-36 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="mx-auto w-full max-w-[1440px] px-6">
         <div className="text-center mx-auto mb-20">
           <p className="font-body text-xl tracking-[0.3em] uppercase text-taupe mb-6">Why Tandee</p>
           <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
@@ -36,19 +36,19 @@ const ValueProps = () => {
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {props.map((item, i) => (
             <div
               key={item.title}
-              className="flex card h-full flex-col rounded-sm border border-divider bg-cream-dark/35 px-8 py-9 text-center"
+              className="flex card h-full flex-col rounded-sm border bg-charcoal/95 px-8 py-9 text-center"
             >
-              <span className="font-display text-5xl font-light text-bronze">
+              <span className="font-display text-5xl font-light text-warm-white">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display text-xl md:text-2xl font-normal text-charcoal mt-4 mb-4">
+              <h3 className="mt-4 mb-4 font-display text-xl font-normal text-white md:text-2xl">
                 {item.title}
               </h3>
-              <p className="font-body text-taupe leading-relaxed">
+              <p className="font-body leading-relaxed text-white">
                 {item.desc}
               </p>
             </div>

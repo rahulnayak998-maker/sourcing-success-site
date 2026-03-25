@@ -16,27 +16,28 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
       <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src={heroBg} type="video/mp4" />
-        </video>
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src={heroBg} type="video/mp4" />
+      </video>
 
-      <div className="relative z-10 text-center mx-auto px-6 pt-24">
-        <div className="-translate-y-16">
-              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.1] mb-8">
-            <em>Some rooms are never forgotten.</em>
+      <div className="relative mt-14 z-10 mx-auto flex min-h-screen w-full flex-col items-center justify-between pb-16 pt-24 text-center">
+        <div className="mt-14 pt-14">
+          <h1 className="font-display text-4xl font-light leading-[1.1] text-white md:text-5xl lg:text-6xl">
+            <em>Premium Selections from China's Finest Manufacturers</em>
           </h1>
         </div>
+
         <a
           href="#contact"
           onClick={scrollToContact}
-          className="inline-block font-body text-xs tracking-[0.25em] uppercase text-white border-b border-white pb-1 hover:text-bronze hover:border-bronze transition-colors"
+          className="inline-block border-b border-white mb-14 pb-1 font-body text-xs uppercase tracking-[0.25em] text-white transition-colors hover:border-bronze hover:text-bronze"
         >
           Begin Your Journey
         </a>

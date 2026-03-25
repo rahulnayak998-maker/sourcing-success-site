@@ -21,7 +21,7 @@ const Categories = () => {
         <div className="text-center mx-auto mb-20">
           <p className="font-body text-xl tracking-[0.3em] uppercase text-taupe mb-6">What We Source</p>
           <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
-            <em>Every material a great interior demands.</em>
+            <em>Your World of Elevated Living, Curated by Us.</em>
           </h2>
         </div>
 

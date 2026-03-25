@@ -46,15 +46,15 @@ const Customization = () => {
           {options.map((item) => (
             <div
               key={item.title}
-              className="flex card h-full flex-col rounded-sm border border-divider/70 bg-background/70 px-8 py-9"
+              className="flex card h-full flex-col rounded-sm border bg-charcoal/95 px-8 py-9"
             >
-              <h3 className="font-display text-2xl font-normal text-charcoal mb-3">{item.title}</h3>
-              <p className="font-body text-taupe leading-relaxed mb-4">{item.desc}</p>
+              <h3 className="mb-3 font-display text-2xl font-normal text-white">{item.title}</h3>
+              <p className="mb-4 font-body leading-relaxed text-warm-white">{item.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="button font-body text-sm tracking-wide px-3 py-1.5 border border-divider text-taupe"
+                    className="button border border-warm-white/25 px-3 py-1.5 font-body text-sm tracking-wide text-warm-white"
                   >
                     {tag}
                   </span>

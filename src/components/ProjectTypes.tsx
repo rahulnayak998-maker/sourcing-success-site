@@ -40,10 +40,10 @@ const ProjectTypes = () => {
           {types.map((item) => (
             <div
               key={item.title}
-              className="card flex h-full flex-col rounded-sm border border-divider bg-cream-dark/35 px-8 py-9 text-center"
+              className="card flex h-full flex-col rounded-sm border border-divider bg-charcoal/95 px-8 py-9 text-center"
             >
-              <h3 className="font-display text-2xl font-normal text-charcoal mb-3">{item.title}</h3>
-              <p className="font-body text-taupe leading-relaxed">{item.desc}</p>
+              <h3 className="font-display text-2xl font-normal text-white mb-3">{item.title}</h3>
+              <p className="font-body text-white leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
