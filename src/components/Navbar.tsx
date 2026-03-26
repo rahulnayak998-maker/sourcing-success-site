@@ -45,19 +45,15 @@ const Navbar = () => {
           <a
             href="#"
             onClick={scrollToTop}
-            className="flex h-12 shrink-0 items-center overflow-hidden opacity-90"
+            className="flex h-20 shrink-0 items-center overflow-hidden opacity-90"
             aria-label="Tandee home"
           >
             <img
               src="/Tandee_Logo_new.png"
               alt="Tandee"
-              className="h-20 w-auto max-w-none object-cover object-center"
+              className="h-24 w-auto max-w-none object-cover object-center"
             />
           </a>
-
-            <p className="mt-0.5 font-body text-[10px] tracking-[0.15em] uppercase text-taupe">
-              CURATED FURNISHINGS FOR EXCEPTIONAL SPACES
-            </p>
             </div>
 
           <div className="flex min-w-0 flex-1 items-center justify-end gap-5">
@@ -79,7 +75,7 @@ const Navbar = () => {
           <a
             href="#"
             onClick={scrollToTop}
-            className="flex h-10 items-center overflow-hidden opacity-90"
+            className="flex h-16 items-center overflow-hidden opacity-90"
             aria-label="Tandee home"
           >
             <img
@@ -105,7 +101,7 @@ const Navbar = () => {
               key={link.label}
               href={link.href}
               onClick={scrollToSection(link.href)}
-              className="block font-body text-xs tracking-[0.2em] uppercase text-taupe transition-colors hover:text-warm-white"
+              className="block font-body text-xs tracking-[0.2em] uppercase text-white transition-colors hover:text-taupe"
             >
               {link.label}
             </a>

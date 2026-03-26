@@ -27,8 +27,8 @@ const HeroSection = () => {
         <source src={heroBg} type="video/mp4" />
       </video>
 
-      <div className="relative mt-14 z-10 mx-auto flex min-h-screen w-full flex-col items-center justify-between pb-16 pt-24 text-center">
-        <div className="mt-14 pt-14">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full flex-col items-center justify-between pb-16 text-center">
+        <div className="mt-20 pt-80">
           <h1 className="font-display text-4xl font-light leading-[1.1] text-white md:text-5xl lg:text-6xl">
             <em>Premium Selections from China's Finest Manufacturers</em>
           </h1>
