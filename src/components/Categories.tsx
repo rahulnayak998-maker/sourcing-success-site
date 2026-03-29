@@ -69,10 +69,10 @@ const Categories = () => {
       </div>
 
       <Dialog open={selectedCategory !== null} onOpenChange={(open) => !open && setSelectedCategory(null)}>
-        <DialogContent className="max-w-5xl overflow-hidden rounded-[32px] border-0 bg-transparent p-0 shadow-[0_24px_80px_rgba(16,34,30,0.24)]">
+        <DialogContent className="max-h-[calc(100vh-2rem)] max-w-5xl overflow-hidden rounded-[32px] border-0 bg-transparent p-0 shadow-[0_24px_80px_rgba(16,34,30,0.24)] sm:max-h-[calc(100vh-4rem)]">
           {selectedCategory ? (
-            <div className="rounded-[32px] border border-white/70 bg-[#f7f1e7] p-6 sm:p-8">
-              <DialogHeader className="pr-10">
+            <div className="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-[32px] border border-white/70 bg-[#f7f1e7] p-6 sm:max-h-[calc(100vh-4rem)] sm:p-8">
+              <DialogHeader className="pr-12">
                 <DialogTitle className="font-display text-2xl font-light text-teal md:text-4xl">
                   {selectedCategory.title}
                 </DialogTitle>
