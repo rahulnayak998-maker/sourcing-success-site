@@ -48,8 +48,8 @@
     /* Custom tokens */
     --cream: 36 33% 97%;
     --cream-dark: 36 20% 92%;
-    --charcoal: 197 61% 20%;
-    --taupe: 39 47% 54%;
+    --teal: 197 61% 20%;
+    --gold: 39 47% 54%;
     --bronze: 30 35% 40%;
     --bronze-light: 30 25% 55%;
     --warm-white: 36 40% 99%;
@@ -83,11 +83,19 @@
   .button{
     border-radius: 2em;
   }
-  .text-charcoal {
-    color: hsl(var(--charcoal));
+  .text-outline {
+    text-shadow:
+      0.35px 0.35px 0 hsl(var(--gold) / 0.75),
+      -0.35px 0.35px 0 hsl(var(--gold) / 0.75),
+      0.35px -0.35px 0 hsl(var(--gold) / 0.75),
+      -0.35px -0.35px 0 hsl(var(--gold) / 0.75),
+      0 0 8px hsl(var(--gold) / 0.22);
   }
-  .text-taupe {
-    color: hsl(var(--taupe));
+  .text-teal {
+    color: hsl(var(--teal));
+  }
+  .text-gold {
+    color: hsl(var(--gold));
   }
   .text-bronze {
     color: hsl(var(--bronze));
@@ -107,8 +115,8 @@
   .border-divider {
     border-color: hsl(var(--divider));
   }
-  .bg-charcoal {
-    background-color: hsl(var(--charcoal));
+  .bg-teal {
+    background-color: hsl(var(--teal));
   }
   .bg-bronze {
     background-color: hsl(var(--bronze));

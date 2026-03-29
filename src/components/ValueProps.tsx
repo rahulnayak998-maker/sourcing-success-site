@@ -1,14 +1,14 @@
 const props = [
   {
-    title: "Private Residential Furniture",
+    title: "Residential Furniture",
     desc: "Furniture that reflects the art of living. Curated pieces tailored to your lifestyle, scale, and sensibilities & crafted to elevate every corner of your home.",
   },
   {
-    title: "Corporate Office Furniture",
-    desc: "Where design meets distinction. Thoughtfully curated furniture that embodies your brand’s stature while enhancing functionality, flow, and productivity.",
+    title: "Corporate Furniture",
+    desc: "Where design meets distinction. Featuring the latest designs and trending furniture, curated to reflect your brand’s stature while elevating functionality, flow, and productivity.",
   },
   {
-    title: "Educational Institution Furniture",
+    title: "Institutional Furniture",
     desc: "Built for learning. Designed for longevity. Purpose-driven furniture curated for schools and colleges. Balancing durability, comfort, and performance at scale.",
   },
   {
@@ -17,7 +17,7 @@ const props = [
   },
   {
     title: "Healthcare Furniture",
-    desc: "Precision in every detail. Care in every element. Meticulously curated furniture focused on hygiene, comfort, and efficiency—supporting critical environments with uncompromising standards."
+    desc: "Precision in every detail. Care in every element. Meticulously curated, contemporary furniture aligned with evolving design standards—focused on hygiene, comfort, and efficiency, supporting critical environments with uncompromising precision."
   },
   {
     title: "Outdoor Furniture",
@@ -25,14 +25,15 @@ const props = [
   }
 ];
 
+const romans = ["I", "II", "III", "IV", "V", "VI"];
+
 const ValueProps = () => {
   return (
     <section className="py-28 md:py-36 bg-background">
       <div className="mx-auto w-full max-w-[1440px] px-6">
         <div className="text-center mx-auto mb-20">
-          <p className="font-body text-xl tracking-[0.3em] uppercase text-taupe mb-6">Why Tandee</p>
-          <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
-            <em>Not what the market offers. What you actually want.</em>
+          <h2 className="font-display text-3xl md:text-5xl font-light text-teal leading-tight">
+            <em>Why Tandee</em>
           </h2>
         </div>
 
@@ -40,12 +41,18 @@ const ValueProps = () => {
           {props.map((item, i) => (
             <div
               key={item.title}
-              className="flex card h-full flex-col rounded-sm border bg-charcoal/95 px-8 py-9 text-center"
+              className="flex card h-full flex-col rounded-sm border bg-teal/95 px-8 py-9 text-center"
+              style={{
+                backgroundImage: "url('/Tandee_bg.png')",
+                backgroundSize: "100% 100%",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
             >
-              <span className="font-display text-5xl font-light text-warm-white">
-                {String(i + 1).padStart(2, "0")}
+              <span className="font-display text-3xl font-light text-warm-white">
+                {romans[i]}
               </span>
-              <h3 className="mt-4 mb-4 font-display text-xl font-normal text-white md:text-2xl">
+              <h3 className="mt-4 mb-4 font-display text-3xl font-normal text-gold">
                 {item.title}
               </h3>
               <p className="font-body leading-relaxed text-white">

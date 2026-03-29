@@ -30,23 +30,22 @@ const Services = () => {
     <section id="services" className="py-28 md:py-36 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mx-auto mb-20">
-          <p className="font-body text-xl tracking-[0.3em] uppercase text-taupe mb-6">Our Services</p>
-          <h2 className="font-display text-3xl md:text-5xl font-light text-charcoal leading-tight">
-            <em>We carry the complexity.</em>
+          <h2 className="font-display text-3xl md:text-5xl font-light text-teal leading-tight">
+            <em>Our Services</em>
           </h2>
         </div>
 
         <div className="max-w-6xl mx-auto">
           {services.map((item, i) => (
             <div key={item.title} className="card border-t py-8 md:py-10 flex gap-6 md:gap-10 items-start">
-              <span className="font-display text-4xl font-light text-charcoal flex-shrink-0 w-10">
+              <span className="font-display text-4xl font-light text-teal flex-shrink-0 w-10">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>
-                <h3 className="font-display pt-2 text-2xl font-normal text-charcoal mb-2">
+                <h3 className="font-display pt-2 text-2xl font-normal text-teal mb-2">
                   {item.title}
                 </h3>
-                <p className="font-body text-xl text-taupe leading-relaxed">
+                <p className="font-body text-xl text-gold leading-relaxed">
                   {item.desc}
                 </p>
               </div>

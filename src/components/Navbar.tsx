@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Collections", href: "#categories" },
+  { label: "Segments", href: "#categories" },
   { label: "Customisation", href: "#customisation" },
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
@@ -37,7 +37,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-teal/95 backdrop-blur-sm"
+    style={{ backgroundImage: "url('/Tandee_bg.png')" }}>
       <div className="container mx-auto px-6">
         {/* Desktop */}
         <div className="hidden min-[980px]:flex items-center justify-between gap-6 py-4">
@@ -45,13 +46,13 @@ const Navbar = () => {
           <a
             href="#"
             onClick={scrollToTop}
-            className="flex h-20 shrink-0 items-center overflow-hidden opacity-90"
+            className="flex h-12 shrink-0 items-center overflow-hidden opacity-90"
             aria-label="Tandee home"
           >
             <img
-              src="/Tandee_Logo_new.png"
+              src="/Tandee_Logo.png"
               alt="Tandee"
-              className="h-24 w-auto max-w-none object-cover object-center"
+              className="h-16 w-auto max-w-none object-cover object-center"
             />
           </a>
             </div>
@@ -62,7 +63,7 @@ const Navbar = () => {
                 key={link.label}
                 href={link.href}
                 onClick={scrollToSection(link.href)}
-                className="whitespace-nowrap font-body text-sm tracking-[0.2em] uppercase text-white transition-colors hover:text-taupe"
+                className="whitespace-nowrap font-body text-sm tracking-[0.2em] uppercase text-white transition-colors hover:text-gold"
               >
                 {link.label}
               </a>
@@ -75,13 +76,13 @@ const Navbar = () => {
           <a
             href="#"
             onClick={scrollToTop}
-            className="flex h-16 items-center overflow-hidden opacity-90"
+            className="flex h-12 items-center overflow-hidden opacity-90"
             aria-label="Tandee home"
           >
             <img
-              src="/Tandee_Logo_new.png"
+              src="/Tandee_Logo.png"
               alt="Tandee"
-              className="h-16 w-auto max-w-none object-cover object-center"
+              className="h-12 w-auto max-w-none object-cover object-center"
             />
           </a>
           <button onClick={() => setOpen(!open)} className="text-warm-white">
@@ -95,13 +96,13 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="bg-charcoal border-b border-divider px-6 py-8 space-y-5 min-[980px]:hidden">
+        <div className="bg-teal border-b border-divider px-6 py-8 space-y-5 min-[980px]:hidden">
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={scrollToSection(link.href)}
-              className="block font-body text-xs tracking-[0.2em] uppercase text-white transition-colors hover:text-taupe"
+              className="block font-body text-xs tracking-[0.2em] uppercase text-white transition-colors hover:text-gold"
             >
               {link.label}
             </a>
