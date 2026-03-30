@@ -107,18 +107,18 @@ const HeroSection = () => {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full flex-col items-center justify-between pb-16 text-center">
-        <div className="mt-20 pt-64">
-          <h1 className="font-body text-outline text-5xl font-light leading-[1.1] text-white">
-            <p>The Furniture in the world's finest homes was not chosen from a catalogue.</p>
-            <p>It was made.</p>
+      <div className="relative z-10 mx-auto flex min-h-screen w-full flex-col items-center justify-center px-6 text-center">
+        <div>
+          <h1 className="font-body text-outline text-4xl font-light leading-[1.1] text-white min-[980px]:text-5xl">
+            <p className="whitespace-nowrap">The Furniture in the world's finest homes was not chosen from a catalogue.</p>
+            <p className="whitespace-nowrap">It was made.</p>
           </h1>
         </div>
 
         <a
           href="#contact"
           onClick={scrollToContact}
-          className="inline-block border-b border-white mb-14 pb-1 font-body text-xs uppercase tracking-[0.25em] text-white transition-colors hover:border-bronze hover:text-bronze"
+          className="absolute bottom-14 inline-block border-b border-white pb-1 font-body text-xs uppercase tracking-[0.25em] text-white transition-colors hover:border-bronze hover:text-bronze"
         >
           Begin Your Journey
         </a>

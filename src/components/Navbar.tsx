@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-teal/95 backdrop-blur-sm"
     style={{ backgroundImage: "url('/Tandee_bg.png')" }}>
-      <div className="container mx-auto px-6">
+      <div className="w-full px-6 min-[980px]:px-10">
         {/* Desktop */}
         <div className="hidden min-[980px]:flex items-center justify-between gap-6 py-4">
         <div className="shrink-0 text-left">
