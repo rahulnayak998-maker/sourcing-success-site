@@ -109,9 +109,9 @@ const HeroSection = () => {
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full flex-col items-center justify-between pb-16 text-center">
         <div className="mt-20 pt-64">
-          <h1 className="font-display text-outline text-5xl font-light leading-[1.1] text-white">
-            <p><em>The furniture in the world's finest homes was not chosen from a catalogue.</em></p>
-            <p><em>It was made.</em></p>
+          <h1 className="font-body text-outline text-5xl font-light leading-[1.1] text-white">
+            <p>The Furniture in the world's finest homes was not chosen from a catalogue.</p>
+            <p>It was made.</p>
           </h1>
         </div>
 
