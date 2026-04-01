@@ -108,17 +108,16 @@ const HeroSection = () => {
       />
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full flex-col items-center justify-center px-6 text-center">
-        <div>
-          <h1 className="font-body text-outline text-4xl font-light leading-[1.1] text-white min-[980px]:text-5xl">
-            <p className="whitespace-nowrap">The Furniture in the world's finest homes was not chosen from a catalogue.</p>
-            <p className="whitespace-nowrap">It was made.</p>
+        <div className="w-full max-w-5xl">
+          <h1 className="font-body text-outline text-4xl font-light leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+            Complete Furniture Sourcing Solutions for Residential & Commercial Projects
           </h1>
         </div>
 
         <a
           href="#contact"
           onClick={scrollToContact}
-          className="absolute bottom-14 inline-block border-b border-white pb-1 font-body text-xs uppercase tracking-[0.25em] text-white transition-colors hover:border-bronze hover:text-bronze"
+          className="absolute bottom-14 inline-block border-b border-white pb-1 font-body uppercase tracking-[0.25em] text-white transition-colors hover:border-bronze hover:text-bronze"
         >
           Begin Your Journey
         </a>

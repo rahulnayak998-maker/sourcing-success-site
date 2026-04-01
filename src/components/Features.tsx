@@ -21,7 +21,7 @@ const props = [
   },
   {
     title: "From Factory to Your Door",
-    desc: "We handle shipping, customs, and logistics to ensure your furniture arrives safely and on time, anywhere in the world."
+    desc: "We handle shipping, customs, and logistics to ensure your furniture arrives safely and on time."
   }
 ];
 

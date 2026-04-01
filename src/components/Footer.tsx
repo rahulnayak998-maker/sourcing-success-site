@@ -20,11 +20,9 @@ const Footer = () => {
         <div className="mb-12 space-y-2 text-center">
           <p className="font-body text-xs text-cream/40">hello@tandee.in</p>
           <p className="font-body text-xs text-cream/40">+91 98765 43210</p>
+          <p className="font-body text-xs text-cream/40">316, Scarlet Bells, 6th Main, HAL 2nd Stage, Indiranagar, Bangaluru - 560038, India</p>
           <p className="font-body text-xs text-cream/40">India · China</p>
           <div className="flex items-center justify-center gap-4 text-cream/40">
-            <a href="https://youtube.com" className="transition-colors hover:text-gold">
-              <Youtube size={25} className="text-inherit" />
-            </a>
             <a href="https://facebook.com" className="transition-colors hover:text-gold">
               <Facebook size={20} className="text-inherit" />
             </a>
@@ -36,7 +34,7 @@ const Footer = () => {
 
         <div className="border-t border-cream/10 pt-8 text-center">
           <p className="font-body text-[11px] text-cream/30">
-            Â© 2026 Tandee. All rights reserved.
+            © 2026 Tandee. All rights reserved.
           </p>
         </div>
       </div>

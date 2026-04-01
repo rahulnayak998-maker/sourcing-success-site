@@ -1,10 +1,10 @@
 import { useState } from "react";
 import categoryResidential from "@/assets/categories/covers/Residential-Furniture.jpg";
-import categoryCorporate from "@/assets/categories/covers/Corporate-Furniture.jpg";
+import categoryCorporate from "@/assets/categories/covers/Corporate-Furniture.jpeg";
 import categoryInstitutional from "@/assets/categories/covers/Institutional-Furniture.jpg";
 import categoryHospitality from "@/assets/categories/covers/Hospitality-Furniture.jpg";
 import categoryHospitals from "@/assets/categories/covers/Hospital-Furniture.jpg";
-import categoryOutdoor from "@/assets/categories/covers/Outdoor-Furniture.jpg";
+import categoryOutdoor from "@/assets/categories/covers/Outdoor-Furniture.jpeg";
 import residential1 from "@/assets/categories/residential/residential1.jpeg";
 import residential2 from "@/assets/categories/residential/residential2.jpeg";
 import residential3 from "@/assets/categories/residential/residential3.jpeg";

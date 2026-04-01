@@ -33,7 +33,7 @@ const ValueProps = () => {
       <div className="mx-auto w-full max-w-[1440px] px-6">
         <div className="text-center mx-auto mb-20">
           <h2 className="font-display text-3xl md:text-5xl font-light text-teal leading-tight">
-            <em>Why Tandee</em>
+            <em>Why Tandee?</em>
           </h2>
         </div>
 

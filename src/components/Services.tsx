@@ -16,7 +16,7 @@ const services = [
     desc: "Every order is inspected in-factory before it leaves. Against your specification. Nothing ships without your sign-off.",
   },
   {
-    title: "From Factory to Your Door",
+    title: "From Factory to Your Doorstep",
     desc: "Shipping, customs, freight coordination, last-mile delivery — managed entirely by Tandee.",
   },
   {

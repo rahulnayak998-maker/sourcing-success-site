@@ -51,7 +51,7 @@ const Customization = () => {
         <div className="mx-auto mb-20 text-center">
           <p className="mb-6 font-body text-xl uppercase tracking-[0.3em] text-gold">Customisation</p>
           <h2 className="font-display text-3xl font-light leading-tight text-teal md:text-5xl">
-            <em>Everything is curated per your vision.</em>
+            <em>Everything is curated as per your vision.</em>
           </h2>
         </div>
 
